@@ -1,0 +1,26 @@
+# data (public, re-downloadable; too large for GitHub)
+data/processed/
+*.gz
+*.tar
+dataset/
+
+# outputs
+results/
+results_quick/
+figures_quick/
+results_*/
+figures_*/
+*.joblib
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+.DS_Store
+
+# kept locally, not on GitHub
+paper/
+docs/
+

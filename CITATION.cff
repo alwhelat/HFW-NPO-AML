@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+title: "HFW-NPO: Compact Gene Expression Signatures for Diagnosis, Prognosis and Drug Response in Acute Myeloid Leukemia"
+message: "This software accompanies a manuscript in preparation. Until it is published, please cite the HFW-NPO article below."
+authors:
+  - family-names: Alwhelat
+    given-names: Almuntadher Mahmood
+    orcid: "https://orcid.org/0009-0002-1511-3991"
+  - family-names: Abiyev
+    given-names: Rahib H.
+version: 1.0.0
+license: MIT
+preferred-citation:
+  type: article
+  title: "HFW-NPO: A Dual Paradigm Hybrid Filter–Wrapper Nomadic People Optimizer Framework for High-Dimensional Alzheimer's Gene Expression Classification"
+  authors:
+    - family-names: Alwhelat
+      given-names: Almuntadher Mahmood
+    - family-names: Abiyev
+      given-names: Rahib H.
+  journal: Electronics
+  volume: 15
+  issue: 13
+  start: 2970
+  year: 2026
+  doi: 10.3390/electronics15132970

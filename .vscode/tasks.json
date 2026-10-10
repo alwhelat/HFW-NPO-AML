@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Setup: create .venv and install requirements",
+      "type": "shell",
+      "windows": { "command": "python -m venv .venv; .\\.venv\\Scripts\\python.exe -m pip install --upgrade pip; .\\.venv\\Scripts\\python.exe -m pip install -r requirements.txt" },
+      "command": "python3 -m venv .venv && ./.venv/bin/python -m pip install -r requirements.txt",
+      "problemMatcher": []
+    },
+    {
+      "label": "Watch progress log (full runs)",
+      "type": "shell",
+      "windows": { "command": "if (!(Test-Path results\\progress.log)) { New-Item -ItemType File -Force results\\progress.log | Out-Null }; Get-Content results\\progress.log -Wait -Tail 40" },
+      "command": "mkdir -p results && touch results/progress.log && tail -n 40 -f results/progress.log",
+      "isBackground": true, "problemMatcher": []
+    },
+    {
+      "label": "Watch progress log (quick check)",
+      "type": "shell",
+      "windows": { "command": "if (!(Test-Path results_quick\\progress.log)) { New-Item -ItemType File -Force results_quick\\progress.log | Out-Null }; Get-Content results_quick\\progress.log -Wait -Tail 40" },
+      "command": "mkdir -p results_quick && touch results_quick/progress.log && tail -n 40 -f results_quick/progress.log",
+      "isBackground": true, "problemMatcher": []
+    }
+  ]
+}

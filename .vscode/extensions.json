@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "ms-python.python",
+    "ms-python.debugpy",
+    "ms-toolsai.jupyter",
+    "ms-toolsai.datawrangler",
+    "janisdd.vscode-edit-csv"
+  ]
+}

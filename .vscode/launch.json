@@ -1,0 +1,62 @@
+{
+  // Run with Ctrl+F5 ("Run Without Debugging") for full speed.
+  // Pick a configuration from the Run and Debug panel (Ctrl+Shift+D).
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "0. Quick check (all steps, ~15 min)",
+      "type": "debugpy", "request": "launch",
+      "program": "${workspaceFolder}/run_all.py",
+      "args": ["--quick", "--skip-prepare"],
+      "cwd": "${workspaceFolder}", "console": "integratedTerminal", "justMyCode": true
+    },
+    {
+      "name": "1. Prepare data (raw downloads -> data/processed)",
+      "type": "debugpy", "request": "launch",
+      "program": "${workspaceFolder}/scripts/01_prepare_data.py",
+      "cwd": "${workspaceFolder}", "console": "integratedTerminal", "justMyCode": true
+    },
+    {
+      "name": "2. Diagnosis - full experiment",
+      "type": "debugpy", "request": "launch",
+      "program": "${workspaceFolder}/run_all.py",
+      "args": ["--only", "diagnosis"],
+      "cwd": "${workspaceFolder}", "console": "integratedTerminal", "justMyCode": true
+    },
+    {
+      "name": "3. Prognosis - full experiment",
+      "type": "debugpy", "request": "launch",
+      "program": "${workspaceFolder}/run_all.py",
+      "args": ["--only", "prognosis"],
+      "cwd": "${workspaceFolder}", "console": "integratedTerminal", "justMyCode": true
+    },
+    {
+      "name": "4. Chemoresistance - full experiment",
+      "type": "debugpy", "request": "launch",
+      "program": "${workspaceFolder}/run_all.py",
+      "args": ["--only", "chemoresistance"],
+      "cwd": "${workspaceFolder}", "console": "integratedTerminal", "justMyCode": true
+    },
+    {
+      "name": "5. Everything - full study",
+      "type": "debugpy", "request": "launch",
+      "program": "${workspaceFolder}/run_all.py",
+      "args": ["--skip-prepare"],
+      "cwd": "${workspaceFolder}", "console": "integratedTerminal", "justMyCode": true
+    },
+    {
+      "name": "6. Post-hoc statistics and biology (step 5, uses results_v2)",
+      "type": "debugpy", "request": "launch",
+      "program": "${workspaceFolder}/scripts/05_post_analysis.py",
+      "args": ["--tag", "v2"],
+      "cwd": "${workspaceFolder}", "console": "integratedTerminal", "justMyCode": true
+    },
+    {
+      "name": "7. Sensitivity analysis K / alpha (step 6, long)",
+      "type": "debugpy", "request": "launch",
+      "program": "${workspaceFolder}/scripts/06_sensitivity.py",
+      "args": ["--tag", "v2"],
+      "cwd": "${workspaceFolder}", "console": "integratedTerminal", "justMyCode": true
+    }
+  ]
+}
